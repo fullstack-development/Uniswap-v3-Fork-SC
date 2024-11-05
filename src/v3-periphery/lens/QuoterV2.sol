@@ -2,11 +2,11 @@
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@uniswap/v3-core/contracts/libraries/SafeCast.sol';
-import '@uniswap/v3-core/contracts/libraries/TickMath.sol';
-import '@uniswap/v3-core/contracts/libraries/TickBitmap.sol';
-import '@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol';
-import '@uniswap/v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol';
+import 'src/v3-core/libraries/SafeCast.sol';
+import 'src/v3-core/libraries/TickMath.sol';
+import 'src/v3-core/libraries/TickBitmap.sol';
+import 'src/v3-core/interfaces/IUniswapV3Pool.sol';
+import 'src/v3-core/interfaces/callback/IUniswapV3SwapCallback.sol';
 
 import '../interfaces/IQuoterV2.sol';
 import '../base/PeripheryImmutableState.sol';

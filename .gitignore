@@ -1,4 +1,4 @@
-# Compiler files
+# Foundry Compiler files
 cache/
 out/
 
@@ -12,3 +12,22 @@ docs/
 
 # Dotenv file
 .env
+
+# Hardhat
+node_modules
+
+# Hardhat files
+/cache
+/artifacts
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+# Hardhat Ignition default folder for deployments against a local node
+ignition/deployments/chain-31337
+ignition/deployments/localhost
