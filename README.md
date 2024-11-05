@@ -47,6 +47,12 @@ $ anvil
 
 ### Deploy
 
+Set up envs
+
+1. ```shell
+$ npx hardhat ignition deploy ignition/modules/UniswapV3.ts --network amoy --deployment-id amoy --verify
+```
+
 ```shell
 $ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```

@@ -1,0 +1,38 @@
+{
+  "name": "uniswap-v3-fork-sc",
+  "version": "1.0.0",
+  "description": "Uniswap v3 fork. Combines smart contracts from two repositories: Core and Periphery",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-foundry": "^1.1.2",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.7",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.11",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.15"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstack-development/Uniswap-v3-Fork-SC.git"
+  },
+  "keywords": [
+    "uniswapv3",
+    "fork",
+    "core",
+    "periphery",
+    "smart-contracts",
+    "solidity"
+  ],
+  "author": "Pavel Naydanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullstack-development/Uniswap-v3-Fork-SC/issues"
+  },
+  "homepage": "https://github.com/fullstack-development/Uniswap-v3-Fork-SC#readme"
+}
