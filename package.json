@@ -17,6 +17,10 @@
   "scripts": {
     "test": "mocha"
   },
+  "engines" : {
+    "npm" : "=8.19.2",
+    "node" : "=18.12.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fullstack-development/Uniswap-v3-Fork-SC.git"
