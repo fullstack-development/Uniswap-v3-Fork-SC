@@ -9,10 +9,13 @@ To understand how UniswapV3 works, I suggest reviewing:
 For simplicity, we use a monorepo that combines:
 - v3-core,
 - v3-periphery.
+- `Multicall2.sol`
 
-## Foundry and Hardhat
+> **Multicall2.sol** is smart contract for receiving data and sending transactions from the web interface. We forked the old version of the interface under the tag 3.3.6. It can only work with the Ethereum network and requires a multicall [of the old version](https://etherscan.io/address/0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696#code). Therefore, we deployed it separately.
 
-For convenience, the project can be built using Hardhat and Foundry. However, deployment is set up only with the [Hardhat Ignition](https://hardhat.org/ignition/docs/getting-started#overview) tool.
+## Hardhat
+
+For convenience, the project can be built using Hardhat. Deployment is set up only with the [Hardhat Ignition](https://hardhat.org/ignition/docs/getting-started#overview) tool.
 
 ## Getting Started
 
@@ -24,14 +27,6 @@ $ git clone https://github.com/fullstack-development/Uniswap-v3-Fork-SC.git
 
 ### Build
 
-Foundry:
-1. Install Foundry. See [documentation](https://book.getfoundry.sh/getting-started/installation).
-2. Run the command
-    ```shell
-    $ forge build
-    ```
-
-Hardhat:
 1. Requires node and npm. Install dependencies.
     ```shell
     $ npm ci
