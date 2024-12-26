@@ -4728,6 +4728,45 @@
       "artifacts": [
         "WETH9"
       ]
+    },
+    "C:\\Users\\Pavel\\Documents\\Projects\\Uniswap-v3-Fork-SC\\src\\Multicall2.sol": {
+      "lastModificationDate": 1735201977735,
+      "contentHash": "0d17e45d2f6e845b081a31f112c62914",
+      "sourceName": "src/Multicall2.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200,
+            "details": {
+              "yul": true
+            }
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "Multicall2"
+      ]
     }
   }
 }

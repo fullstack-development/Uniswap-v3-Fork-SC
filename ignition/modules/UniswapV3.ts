@@ -30,6 +30,7 @@ export default buildModule('UniswapV3', (m) => {
   })
 
   const uniswapInterfaceMulticall = m.contract("UniswapInterfaceMulticall");
+  const multicall2 = m.contract("Multicall2");
 
   return {
     weth,
@@ -38,6 +39,7 @@ export default buildModule('UniswapV3', (m) => {
     nonfungibleTokenPositionDescriptor,
     nonfungibleTokenPositionManager,
     quoterV2,
-    uniswapInterfaceMulticall
+    uniswapInterfaceMulticall,
+    multicall2
   };
 });
