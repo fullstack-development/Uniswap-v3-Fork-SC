@@ -40,6 +40,32 @@ $ git clone https://github.com/fullstack-development/Uniswap-v3-Fork-SC.git
 
 The Uniswap smart contracts were not modified. They are taken from the repositories as-is, so there is no need for test coverage.
 
+### Change POOL_INIT_CODE_HASH
+
+> Mandatory to perform for deployment in a new network
+
+To generate the pool address in the third version, similarly to the second version, the hash of the pool smart contract bytecode is used in [PoolAddress.sol](./src/v3-periphery/libraries/PoolAddress.sol). This ensures that addresses are created based on the protocol pool code.
+
+The hash is declared using a variable `POOL_INIT_CODE_HASH`.
+
+To deploy smart contracts to a new network, you need to compile the project and calculate a new hash taking into account the specifics of your compiler settings.
+
+We have prepared a [script](./scripts/computeInitCodeHash.js) for calculation new `POOL_INIT_CODE_HASH`.
+
+Steps:
+
+1. Build project
+    ```shell
+    $ npx hardhat compile
+    ```
+2. Run calculation `POOL_INIT_CODE_HASH`
+    ```shell
+    node .\scripts\computeInitCodeHash.js
+    ```
+3. Replace the `POOL_INIT_CODE_HASH` variable with the calculation result in [PoolAddress.sol](./src/v3-periphery/libraries/PoolAddress.sol)
+
+Now you can successfully start deploying smart contracts.
+
 ### Deploy
 
 Deployment is implemented only with Hardhat Ignition. The deployment modules are located in the `/ignition/modules` folder.
@@ -66,7 +92,7 @@ Deployment steps:
     POLYGON_API_KEY=[API_KEY]
     ```
 
-2. Build the project if it hasn’t been done yet. Run the command:
+2. Build the project if it hasn’t been done yet and change [POOL_INIT_CODE_HASH](./src/v3-periphery/libraries/PoolAddress.sol). Run the command:
 
     ```shell
     $ npx hardhat compile
